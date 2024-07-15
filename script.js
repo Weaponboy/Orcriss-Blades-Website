@@ -1,4 +1,3 @@
-
 $("#customise").css({ "display": "none" });
 $("#home").css({ "display": "block" });
 $("#contactus").css({ "display": "none" });
