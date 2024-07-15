@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="images/icon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <title>Orcriss Knives</title>
+
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            margin: 0;
+            padding: 0;
+            user-select: none;
+        }
+
+        #navbar {
+            display: inline-block;
+            position: fixed;
+            width: 100%;
+            height: 11.2%;
+            background-color: rgb(63, 13, 22);
+        }
+
+        #im {
+            width: auto;
+            height: 80%;
+            margin-left: 1%;
+            margin-top: -2%;
+        }
+
+        #orc {
+            font-size: 300%;
+        }
+
+        #hello {
+            display: inline-block;
+            margin: 0;
+            padding-top: 0.4%;
+            padding-bottom: 0%;
+            padding-left: 1%;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+        }
+
+        .topbar {
+            padding: 1.4rem .8rem;
+            color: white;
+            font-size: 130%;
+            text-align: center;
+            display: inline-block;
+            font-family: "Helvetica ", sans-serif;
+            font-weight: 100;
+        }
+
+        #dams {
+            width: 80%;
+            height: auto;
+            margin-left: 10%;
+            margin-top: 6%;
+            border-width: 10px;
+            border-color: rgb(63, 13, 22);
+            border-style: solid;
+        }
+
+        #text {
+            margin-top: 5%;
+            float: left;
+            width: 45%;
+            height: 70%;
+            background-color: rgb(82, 74, 76);
+            text-align: center;
+        }
+
+        #stan {
+            padding-top: 1%;
+            padding-right: 10%;
+            padding-left: 10%;
+            padding-bottom: 15%;
+            font-size: 200%;
+            color: white;
+        }
+
+        #small {
+            padding-top: 20%;
+            padding-right: 10%;
+            padding-left: 10%;
+            font-size: 200%;
+            color: white;
+        }
+
+        #pic {
+            margin-top: 6.3%;
+            float: right;
+            width: 45%;
+            height: 60%;
+            padding-top: 0%;
+            margin-left: 10%;
+        }
+
+        #stand {
+            width: 77%;
+            border-width: 10px;
+            border-color: rgb(63, 13, 22);
+            border-style: solid;
+        }
+
+        #footer {
+            width: 100%;
+            height: auto;
+            margin-top: 5%;
+            float: right;
+            text-align: center;
+            margin-bottom: 3%;
+        }
+
+        #page {
+            font-size: 125%;
+            color: rgb(63, 13, 22);
+            padding-left: 17%;
+            padding-right: 17%;
+        }
+
+        #hi {
+            margin: 0;
+            padding: 4rem;
+            color: rgb(63, 13, 22);
+        }
+
+        #link {
+            color: rgb(148, 36, 56);
+        }
+
+        .Toggle {
+            position: absolute;
+            top: 3vh;
+            right: 1rem;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+        }
+
+        .Toggle .bar {
+            height: 3px;
+            width: 100%;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        #con {
+            float: right !important;
+            margin: 0;
+            padding: 0;
+            width: 50%;
+        }
+
+        .active {
+            display: block;
+        }
+
+        @media(max-width: 1050px) {
+
+            .row {
+                width: 100%;
+            }
+
+            #you {
+                padding-top: 5%;
+            }
+
+            #orc {
+                font-size: 200%;
+            }
+
+            .Toggle {
+                display: flex;
+            }
+
+            #im {
+                width: 6vh;
+            }
+
+            #hello {
+                padding: 1% 1%;
+            }
+
+            #navbar {
+                height: auto;
+            }
+
+            .topbar {
+                display: block;
+                width: 100%;
+                padding: .8rem;
+            }
+
+            #con {
+                text-align: center;
+                width: 100%;
+                margin-right: 0;
+            }
+
+            .active {
+                display: none;
+            }
+
+            #small {
+                font-size: 60%;
+                font-weight: 300;
+            }
+
+            #stan {
+                font-size: 60%;
+                font-weight: 300;
+            }
+
+            #pic {
+                width: 13rem;
+                height: 60%;
+            }
+        }
+
+        #cuslink {
+            padding: 0;
+            margin: 0;
+            width: fit-content;
+            padding-bottom: 0.3%;
+            color: rgb(49, 2, 2);
+            font-weight: 700;
+        }
+
+        #cuslink:hover {
+            background-color: #000;
+            border-radius: 4px;
+        }
+
+        #cuslink2 {
+            padding: 0;
+            margin: 0;
+            width: fit-content;
+            padding-bottom: 0.3%;
+            color: rgb(49, 2, 2);
+            font-weight: 700;
+        }
+
+        #cuslink2:hover {
+            background-color: #000;
+            border-radius: 4px;
+        }
+
+        #prodlink {
+            padding: 0;
+            margin: 0;
+            width: fit-content;
+            padding-bottom: 0.3%;
+            color: rgb(49, 2, 2);
+            font-weight: 700;
+        }
+
+        #prodlink:hover {
+            background-color: #000;
+            border-radius: 4px;
+        }
+
+        .topbar:hover {
+            background-color: rgb(37, 0, 0);
+            border-radius: 10px;
+        }
+
+        #customise {
+            padding-top: 7%;
+            padding-right: 0;
+            margin: 0;
+            padding-bottom: 1rem;
+            background-color: white;
+        }
+
+        #you {
+            font-size: 260%;
+            color: rgb(49, 2, 2);
+            text-align: center;
+        }
+
+        #des {
+            font-size: 140%;
+            color: rgb(49, 2, 2);
+            margin-left: 10%;
+            margin-right: 10%;
+            font-weight: bold;
+            margin-bottom: 4%;
+            text-align: center;
+        }
+
+        .bladecus {
+            border-color: rgb(82, 74, 76);
+            border-width: 10%;
+            border-style: solid;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin: 0;
+            border-radius: 4%;
+            background-color: rgb(94, 28, 40);
+        }
+
+        #bladerow {
+            width: 100;
+            margin-right: 0;
+            margin-left: 0;
+            color: #000;
+            font-weight: 600;
+        }
+
+        #bladeshapes {
+            width: 60%;
+        }
+
+        #bladehead {
+            font-size: 180%;
+        }
+
+        #tangrow {
+            width: 100;
+            margin-right: 0;
+            margin-left: 0;
+            background-color: rgb(82, 74, 76);
+            color: #000;
+        }
+
+        .tangcus {
+            text-align: center;
+            padding: 2rem 4rem;
+            font-weight: 600;
+        }
+
+        .tangimg {
+            width: 40%;
+            padding-top: 2rem;
+        }
+
+        #pinh {
+            font-size: 180%;
+        }
+
+        .handleimg {
+            width: 60%;
+        }
+
+        #handlerow {
+            width: 100;
+            margin-right: 0;
+            margin-left: 0;
+            color: #000;
+        }
+
+        .inlayimg {
+            width: 28%;
+        }
+
+        #right {
+            padding-right: .06rem;
+        }
+
+        .inlayimgbig {
+            width: 40%;
+        }
+
+        #inlayrow {
+            width: 100;
+            margin-right: 0;
+            margin-left: 0;
+            color: #000;
+        }
+
+        #finishrow {
+            width: 100;
+            margin-right: 0;
+            margin-left: 0;
+            color: #000;
+        }
+
+        .finishimg {
+            width: 40%;
+        }
+
+        .finishimgbig {
+            width: 40%;
+            padding-top: 2rem;
+        }
+
+        #hi {
+            text-align: center;
+            padding-bottom: 2%;
+            width: 100%;
+        }
+
+        #homerow {
+            width: 100%;
+        }
+
+        .tangcustext {
+            background-color: rgb(94, 28, 40);
+        }
+
+        .finishrow2 {
+            width: 100.926%;
+            color: #000;
+        }
+
+        .headtext {
+            font-weight: 600;
+            font-size: 180%;
+        }
+
+        .subtext {
+            font-weight: 600;
+            font-size: 100%;
+        }
+
+        #contactus {
+            background-color: white;
+            padding-bottom: 1rem;
+            width: 100%;
+            margin: 0;
+        }
+
+        .contact {
+            padding-top: 8rem;
+            text-align: center;
+        }
+
+        #idcontact {
+            width: 100%;
+            margin: 0;
+        }
+
+        #con_text {
+            font-size: 180%;
+        }
+
+        #con_text2 {
+            font-size: 110%
+        }
+
+        #pigon {
+            width: 20%;
+        }
+
+        .about {
+            text-align: center;
+            font-weight: 600;
+        }
+
+        #idabout {
+            padding-left: 20%;
+            padding-right: 20%;
+            margin: 0;
+            padding-top: 6rem;
+            width: 100%;
+        }
+
+        #aboutpic {
+            width: 40%;
+        }
+
+        #aboutus {
+            background-color: white;
+            padding-bottom: 5rem;
+        }
+
+        .hello {
+            text-shadow: 4px, 4px, 5px, #000;
+        }
+
+        #padding {
+            background-image: url(images/Image\ 2022-07-23\ at\ 4.35.29\ PM.jpeg);
+            background-position-x: center;
+            background-position-y: center;
+            background-size: cover;
+            border-color: rgb(82, 74, 76);
+            border-width: 10px;
+            border-style: solid;
+            text-align: center;
+            margin: 0;
+            border-radius: 8%;
+            background-color: rgb(94, 28, 40);
+            padding-left: 5rem;
+            padding-right: 5rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            color: black;
+
+        }
+
+        #abo_text {
+            font-size: 300%;
+        }
+
+        #abo_text2 {
+            font-size: 140%;
+        }
+
+        #hihome {
+            text-align: center;
+            padding-top: 4%;
+            padding-bottom: 2%;
+            width: 100%;
+        }
+
+        #hicus {
+            text-align: center;
+            padding-bottom: 2%;
+            width: 100%;
+        }
+
+        #hicontact24 {
+            margin: 0;
+            padding: 4rem;
+            color: rgb(63, 13, 22);
+            text-align: center;
+            padding-bottom: 2%;
+            width: 100%;
+        }
+
+        @media(max-width: 1050px) {
+
+            #abo_text {
+                font-size: 200%;
+                font-weight: 650;
+            }
+
+            #abo_text2 {
+                font-size: 110%;
+                font-weight: 650;
+            }
+
+            #page {
+                font-size: 100%;
+                color: rgb(63, 13, 22);
+                padding-left: 4%;
+                padding-right: 4%;
+            }
+
+            #padding {
+                padding-left: .4rem;
+                padding-right: .4rem;
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+                margin-left: 0%;
+                margin-right: 0%;
+            }
+
+            #idabout {
+                padding-left: 0%;
+                padding-right: 0%;
+                margin: 0;
+                padding-top: 6rem;
+                width: 100%;
+            }
+
+
+            #none {
+                display: none;
+            }
+
+            #aboutus {
+                padding-bottom: 20rem;
+            }
+        }
+
+        @media(max-width: 1050px) {
+
+
+            #contactus {
+                padding-bottom: 15%;
+            }
+
+            #cart {
+                text-align: center;
+                width: 300%;
+            }
+
+            #home {
+                padding-top: 3.5rem;
+            }
+
+            #hihome {
+                text-align: center;
+                padding-top: 15rem;
+                padding-bottom: 2%;
+                width: 100%;
+            }
+
+            #hicus {
+                text-align: center;
+                padding-top: 6%;
+                padding-bottom: 6%;
+                width: 100%;
+            }
+
+            #pic {
+                margin-top: 6.3%;
+                float: right;
+                width: 50%;
+                height: 60%;
+                padding-top: 0%;
+                margin-left: 5%;
+            }
+
+            #stand {
+                width: 96%;
+                border-width: 10px;
+                border-color: rgb(63, 13, 22);
+                border-style: solid;
+            }
+
+            #customise {
+                padding-top: 3rem;
+            }
+
+            #products {
+                padding-top: -3rem;
+                padding-bottom: 6rem;
+                background-color: rgb(82, 74, 76);
+                padding-left: 0%;
+                padding-right: 0%;
+            }
+
+            .Toggle {
+                top: 2vh;
+            }
+
+            #custom {
+                font-size: 150%;
+            }
+
+            #contactus {
+                padding-bottom: 21.5rem;
+            }
+
+            #hicontact24 {
+                padding-top: 24.5rem;
+                width: 100%;
+            }
+        }
+
+        #idprod {
+            width: 100%;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            border-style: solid;
+        }
+
+        .idprod2 {
+            width: 100%;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            margin-top: 2rem;
+            border-style: solid;
+        }
+
+        .idprod2_4 {
+            width: 100%;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            margin-top: 2rem;
+            border-style: solid;
+        }
+
+        .prodcol {
+            text-align: center;
+        }
+
+        .prodcol_M {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        #products {
+            padding-top: 6rem;
+            padding-bottom: 1rem;
+            background-color: white;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+        .sheathimg {
+            width: 70%;
+        }
+
+        .none {
+            display: none;
+        }
+
+        #cart {
+            width: 100%;
+            height: auto;
+            padding: 0;
+            margin: 0;
+        }
+
+        #carttab {
+            width: 7%;
+        }
+
+        #checkout {
+            padding-top: 7rem;
+        }
+
+        .idprod2 {
+            display: none;
+        }
+
+        .idprod2_4 {
+            display: inline-flex;
+        }
+
+        #aboutpic_4 {
+            width: 80%;
+        }
+
+        @media(max-width: 1050px) {
+            .idprod2 {
+                display: flex;
+            }
+
+            .idprod2_4 {
+                display: none;
+            }
+        }
+
+        @media(min-width: 1050px) {
+
+            .back2 {
+                padding-top: 3rem;
+                padding-bottom: 22rem;
+                text-align: center;
+            }
+
+            .idprod2 {
+                display: none;
+            }
+
+            .idprod2_4 {
+                display: flex;
+            }
+        }
+
+        .back {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            text-align: center;
+        }
+
+        .back2 {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            text-align: center;
+        }
+
+        #heading1 {
+            padding-top: 1rem;
+            text-align: center;
+            color: #000;
+            font-size: 200%;
+        }
+
+        #galleryHeading {
+            font-size: 300%;
+            text-align: center;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        .padding {
+            padding-bottom: 2rem;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="navbar">
+        <img id="im" src="images/Orcris__2_-removebg-preview.png" alt="Orcriss logo">
+
+        <div id="hello">
+            <h1 id="orc">Orcriss Knives</h1>
+        </div>
+
+        <a href="#" class="Toggle" id="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+
+        <div id="con" class="active">
+
+            <div class="topbar" id="hometab">
+                <span class=tabs>Home</span>
+            </div>
+
+            <div class="topbar" id="customtab">
+                <span class=tabs>Customisation</span>
+            </div>
+
+            <div class="topbar" id="prodtab">
+                <span class=tabs>Products</span>
+            </div>
+
+            <div class="topbar" id="abouttab">
+                <span class=tabs>About Us</span>
+            </div>
+
+            <div class="topbar" id="contacttab">
+                <span class=tabs>Contact Us</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="home">
+        <img id="dams" src="images/WhatsApp Image 2022-07-23 at 4.35.55 PM.jpeg" alt="Dams knife">
+
+        <div class="row" id="homerow">
+            <div id="text" class="col-12 col-sm-12 col-md-6 col-xl-6">
+                <p id="small">We are a small blade creation company that specialises in the production of hand-crafted
+                    custom
+                    knives. We are passionate about excellent quality knives for either your kitchen or everyday outdoor
+                    use.
+                </p>
+                <p id="stan">We have a standard EDC (Everyday Carry) knife, and a standard kitchen pairing
+                    knife. You can view both on our <a id="prodlink">Products</a> page.
+                </p>
+            </div>
+
+            <div id="pic" class="col-12 col-sm-12 col-md-6 col-xl-6">
+                <img id="stand" src="images/WhatsApp Image 2022-08-07 at 1.36.35 PM.jpeg" alt="standed knife">
+            </div>
+        </div>
+
+        <div id="footer">
+            <h2 id="custom">Make your knife uniquely yours!</h2>
+            <h3 id="page">We will also work with you to customise your design so that it reflects your personal
+                preferences
+                and needs.
+                Please see our <a id="cuslink">Customisation</a> page for more details.
+            </h3>
+        </div>
+
+        <h4 class="back">©2023 by Orcrissknives.</h4>
+    </div>
+
+    <div id="customise">
+        <div class="col-12 col-sm-12 col-md-12 col-xl-12">
+            <h2 id="you">Perfectly you!</h2>
+            <h3 id="des">When it comes to your knife design, there are a number of elements that you can customise to
+                make
+                your blade unique and perfectly suited to your needs and preferences. We will happily work with you to
+                design and create the perfect knife. There are a number of elements for you to consider below, and each
+                will
+                potentially impact the final price of the knife.
+            </h3>
+        </div>
+
+        <div class="row" id="bladerow">
+            <div class="col-12 col-sm-12 col-md-6 col-xl-6 bladecus">
+                <h4 class="headtext">Blade length and shape</h4>
+                <p class="subtext">Although there are standard blade shapes, we can adapt and tweak any design to fit
+                    your
+                    needs
+                    and preferences.
+                </p>
+                <img id="bladeshapes" src="images/The-Complete-Guide-to-Knife-Blade-Shapes.png" alt="blade shapes">
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-xl-6 bladecus">
+                <h4 class="headtext">Tang and pin style</h4>
+                <p class="subtext">There are two different styles of knife tangs, one is called hidden tang and is as
+                    the name suggests the tang is hidden in the handle. The other is full tang
+                    where
+                    you
+                    can see the tang all the way around the handle.</p>
+
+                <img class="tangimg" src="images/hiddentang-1.jpg" alt="blade shapes">
+                <img class="tangimg" src="images/full-tang-knife.gif" alt="blade shapes">
+            </div>
+        </div>
+
+        <div class="row" id="handlerow">
+
+            <div class="col-12 col-sm-12 col-md-6 col-xl-6 bladecus">
+                <h4 class="headtext">Handle material and shape</h4>
+                <p class="subtext">We can source any wood you might want for your handle but have some standard woods
+                    that we
+                    will have in stock. We can make your handle to any shape you would like, here are some handle
+                    shape ideas
+                </p>
+                <img class="handleimg" src="images/b5449b3febbf6a0a17f12eed9c19d610.jpg" alt="blade shapes">
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 col-xl-6 bladecus">
+                <h4 class="headtext">Handle inlays</h4>
+                <p class="subtext">We can do custom spine work with a design of your choice. We can
+                    also
+                    do custom inlay using copper, brass or stainless steel.
+                </p>
+                <img class="inlayimg" id="right" src="images/Image 2022-07-23 at 4.35.29 PM.jpeg" alt="blade shapes">
+                <img class="inlayimgbig" src="images/422f545d-2af4-4399-aa7a-6caf500e130d.jpg" alt="blade shapes">
+                <img class="inlayimg" src="images/WhatsApp giImage 2022-07-23 at 4.35.29 PM (1).jpeg"
+                    alt="blade shapes">
+            </div>
+        </div>
+
+
+
+        <div class="row" id="finishrow">
+            <div class="col-12 col-sm-12 col-md-6 col-xl-6 bladecus">
+                <h4 class="headtext">Blade finishes </h4>
+                <p class="subtext">We can do different blade finishes this includes polished, black and a two tone
+                    finish.
+                </p>
+                <img class="finishimg" id="right" src="images/Black finish.jpeg" alt="blade shapes">
+                <img class="finishimg" src="images/shiny finish.jpeg" alt="blade shapes">
+                <img class="finishimgbig" src="images/WhatsApp Image 2022-07-23 at 4.28.19 PM.jpeg" alt="blade shapes">
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-xl-6 bladecus">
+                <h4 class="headtext">Leather Sheaths</h4>
+                <p class="subtext">We can make you a custom hand stiched leather sheath that will allow you carry your
+                    knife with you anywhere you want to take it
+                </p>
+                <img class="sheathimg" id="sheath" src="images/1668589684895.jpg" alt="blade shapes">
+            </div>
+        </div>
+
+        <div class="row" id="finishrow">
+            <div class="col-12 col-sm-12 col-md-6 col-xl-6 bladecus">
+                <h4 class="headtext">Name Etching</h4>
+                <p class="subtext">
+                </p>
+                <img class="finishimg" id="right" src="images/1668589170916 (1).jpg" alt="blade shapes">
+            </div>
+        </div>
+        <h4 class="back">©2023 by Orcrissknives.</h4>
+
+    </div>
+
+    <div id="contactus">
+
+        <div class="row" id="idcontact">
+            <div class="col-12 sm-col-12 md-col-12 xl-col-12 contact">
+                <h4 id="con_text">CONTACT</h4>
+                <p id="con_text2">To order, or to start the design process, please contact us with the email below</p>
+                <p>orcrissblades@gmail.com</p>
+                <img id="pigon" src="images/Pigeon.jpg" alt="Contact Us">
+            </div>
+
+        </div>
+
+        <h4 class="back2">©2023 by Orcrissknives.</h4>
+
+    </div>
+
+    <div id="aboutus">
+        <div class="container-fluid">
+            <div class="row" id="idabout">
+                <div class="col-12 sm-col-12 md-col-6 xl-col-6 about" id="padding">
+                    <h4 id="abo_text" class="hello">The Orcriss Team</h4>
+                    <p id="abo_text2" class="hello">We are Josh and Ben, brothers who make the knives happen! We live on
+                        a
+                        farm just
+                        outside of Robertson, South Africa. We first became interested in knife making a few years ago
+                        when
+                        with our friends we organized a "weapons day" where we all competed in a weapons making
+                        competition.
+                        That is when we made our first blade and from there we kept on improving our knife making game.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row padding">
+                <h5 id="galleryHeading">Gallery</h5>
+
+                <img class="col-md-3" src="images/IMG_20221015_190245_1.jpg" alt="">
+
+                <img class="col-md-3" src="images/IMG_20230220_143628_1.jpg" alt="">
+
+                <img class="col-md-3" src="images/IMG_20230302_102517_1.jpg" alt="">
+
+                <img class="col-md-3" src="images/IMG_20230408_110352_1.jpg" alt="">
+            </div>
+
+            <div class="row padding">
+                <img class="col-md-3" src="images/IMG_20230726_172240.jpg" alt="">
+
+                <img class="col-md-3" src="images/IMG_20230705_162614.jpg" alt="">
+
+                <img class="col-md-3" src="images/IMG-20210813-WA0019.jpg" alt="">
+
+                <img class="col-md-3" src="images/IMG-20210816-WA0005.jpg" alt="">
+            </div>
+
+            <div class="row padding">
+                <img class="col-md-3" src="images/IMG_20230629_151140.jpg" alt="">
+
+                <img class="col-md-3" src="images/IMG-20220626-WA0003.jpg" alt="">
+
+                <img class="col-md-3" src="images/IMG-20230215-WA0014.jpg" alt="">
+
+                <img class="col-md-3" src="images/IMG-20220902-WA0000.jpg" alt="">
+            </div>
+
+
+        </div>
+
+        <h4 class="back">©2023 by Orcrissknives.</h4>
+
+    </div>
+
+    <div id="products">
+
+        <div class="col-12 col-sm-12 col-md-12 col-xl-12">
+            <h2 id="you">Standard Blades</h2>
+            <h3 id="des">Below are two blades that have a set price and design. To order them please use the contact
+                details on the contact us page. Or if you want a custom knife with
+                some of your own added touches please visit our <a id="cuslink2">Customisation</a> page.
+            </h3>
+        </div>
+
+        <div class="row idprod2">
+            <div class="col-12 sm-col-12 md-col-6 xl-col-6 prodcol">
+                <h4 id="prod1">Everyday Carry</h4>
+                <p id="prod1text">
+                    This knife was designed for the main uses of carving, camping, fishing and farming to name a few.
+                </p>
+
+                <h4 id="prod1">Product deteils</h4>
+                <p id="prod1text">
+                    Size, Length 200mm Width 25mm Blade Thickness 6mm Handle thickness 20mm
+                    Materials, the blade is made from 5160 high carbon steel. This type of steel is prone to rust but
+                    makes up for that with how sharp it can get and how long it can hold that edge. Storing correctly
+                    prevents rust from forming. The handle is made
+                    from oak and the pins are stainless steel
+                </p>
+
+                <h4 id="prod1">Price</h4>
+                <p id="prod1text">
+                    R750
+                </p>
+            </div>
+
+            <div class="col-12 sm-col-12 md-col-6 xl-col-6 prodcol">
+                <img id="aboutpic" src="images/EDC knife.jpeg" alt="">
+            </div>
+        </div>
+
+        <div class="row idprod2">
+            <div class="col-12 sm-col-12 md-col-6 xl-col-6 prodcol">
+                <h4 id="prod1">Paring knife</h4>
+                <p id="prod1text">
+                    This knife was designed as a utility knife in the kitchen
+                </p>
+
+                <h4 id="prod1">Product deteils</h4>
+                <p id="prod1text">
+                    Size, Length 180mm Width 20mm Blade Thickness 3mm Handle thickness 15mm
+                    Materials, the blade is made from 1070 high carbon steel. This type of steel is prone to rust but
+                    makes up for that with how sharp it can get and how long it can hold that edge. Storing correctly
+                    prevents rust from forming. The handle is made
+                    from spanish cedar with a hidden tang.
+                </p>
+
+                <h4 id="prod1">Price</h4>
+                <p id="prod1text">
+                    R700
+                </p>
+            </div>
+
+            <div class="col-12 sm-col-6 md-col-6 xl-col-6 prodcol">
+                <img id="aboutpic" src="images/K Knife.jpeg" alt="">
+            </div>
+        </div>
+
+        <div class="row idprod2_4">
+            <div class="col-6 prodcol_M">
+                <h4 id="prod1">Utility Blade</h4>
+                <p id="prod1text">
+                    Check out our Handmade Utility Knife — Picture
+                    this: a super strong steel blade that can handle anything, paired with a sleek and stylish design.
+                    It's
+                    your go-to for kitchen missions, workshop adventures, and everyday hero stuff. Tough as nails, with
+                    a touch of rustic charm. Get ready to tackle tasks with style
+                </p>
+
+                <h4 id="prod1">Product deteils</h4>
+                <p id="prod1text">
+                    Size, Length 150mm Width 25mm Blade Thickness 6mm Handle thickness 6mm
+                    Materials, the blade is made from 5160 high carbon steel. This type of steel is prone to rust but
+                    makes up for that with how sharp it can get and how long it can hold that edge. The handle is a
+                    stiletto style steel handle
+                </p>
+
+                <h4 id="prod1">Price</h4>
+                <p id="prod1text">
+                    R400
+                </p>
+            </div>
+
+            <div class="col-6 prodcol_M">
+                <img id="aboutpic_4" src="images/Screenshot 2023-11-23 150431.png" alt="">
+            </div>
+        </div>
+
+        <div class="row idprod2_4">
+            <div class="col-6 prodcol_M">
+                <h4 id="prod1">Everyday Carry</h4>
+                <p id="prod1text">
+                    This knife was designed for the main use of carving, camping, fishing and farming to name a few.
+                </p>
+
+                <h4 id="prod1">Product deteils</h4>
+                <p id="prod1text">
+                    Size, Length 200mm Width 25mm Blade Thickness 6mm Handle thickness 20mm
+                    Materials, the blade is made from 5160 high carbon steel. This type of steel is prone to rust but
+                    makes up for that with how sharp it can get and how long it can hold that edge. The handle is made
+                    from oak and the pins are stainless steel
+                </p>
+
+                <h4 id="prod1">Price</h4>
+                <p id="prod1text">
+                    R750
+                </p>
+            </div>
+
+            <div class="col-6 prodcol_M">
+                <img id="aboutpic_4" src="images/EDC knife.jpeg" alt="">
+            </div>
+        </div>
+
+        <div class="row idprod2_4">
+            <div class="col-6 sm-col-6 md-col-6 xl-col-6 prodcol_M">
+                <h4 id="prod1">Paring knife</h4>
+                <p id="prod1text">
+                    This knife was designed as a utility knife in the kitchen
+                </p>
+
+                <h4 id="prod1">Product deteils</h4>
+                <p id="prod1text">
+                    Size, Length 180mm Width 20mm Blade Thickness 3mm Handle thickness 15mm
+                    Materials, the blade is made from 1070 high carbon steel. This type of steel is prone to rust but
+                    makes up for that with how sharp it can get and how long it can hold that edge. The handle is made
+                    from spanish cedar with a hidden tang.
+                </p>
+
+                <h4 id="prod1">Price</h4>
+                <p id="prod1text">
+                    R700
+                </p>
+            </div>
+
+            <div class="col-6 sm-col-6 md-col-6 xl-col-6 prodcol_M">
+                <img id="aboutpic_4" src="images/K Knife.jpeg" alt="">
+            </div>
+        </div>
+
+        <h4 class="back">©2023 by Orcrissknives.</h4>
+    </div>
+
+    <script type="text/javascript">
+
+        $("#customise").css({ "display": "none" });
+        $("#home").css({ "display": "block" });
+        $("#contactus").css({ "display": "none" });
+        $("#aboutus").css({ "display": "none" });
+        $("#products").css({ "display": "none" });
+        $("#checkout").css({ "display": "none" });
+
+        $("#hometab").click(function () {
+            $("#customise").css({ "display": "none" });
+            $("#home").css({ "display": "block" });
+            $("#aboutus").css({ "display": "none" });
+            $("#products").css({ "display": "none" });
+            $("#contactus").css({ "display": "none" });
+            $("#con").toggleClass("active");
+        });
+
+        $("#carttab").click(function () {
+            $("#customise").css({ "display": "none" });
+            $("#checkout").css({ "display": "block" });
+            $("#aboutus").css({ "display": "none" });
+            $("#home").css({ "display": "none" });
+            $("#products").css({ "display": "none" });
+            $("#contactus").css({ "display": "none" });
+            $("#con").toggleClass("active");
+        });
+
+        $("#abouttab").click(function () {
+            $("#customise").css({ "display": "none" });
+            $("#aboutus").css({ "display": "block" });
+            $("#products").css({ "display": "none" });
+            $("#contactus").css({ "display": "none" });
+            $("#home").css({ "display": "none" });
+            $("#con").toggleClass("active");
+        });
+
+
+        $("#contacttab").click(function () {
+            $("#customise").css({ "display": "none" });
+            $("#home").css({ "display": "none" });
+            $("#aboutus").css({ "display": "none" });
+            $("#products").css({ "display": "none" });
+            $("#contactus").css({ "display": "block" });
+            $("#con").toggleClass("active");
+        });
+
+        $("#customtab").click(function () {
+            $("#home").css({ "display": "none" });
+            $("#aboutus").css({ "display": "none" });
+            $("#contactus").css({ "display": "none" });
+            $("#customise").css({ "display": "block" });
+            $("#products").css({ "display": "none" });
+            $("#con").toggleClass("active");
+        });
+
+        $("#prodtab").click(function () {
+            $("#home").css({ "display": "none" });
+            $("#aboutus").css({ "display": "none" });
+            $("#contactus").css({ "display": "none" });
+            $("#customise").css({ "display": "none" });
+            $("#products").css({ "display": "block" });
+            $("#con").toggleClass("active");
+        });
+
+        $("#toggle-button").click(function () {
+            $("#con").toggleClass("active");
+        });
+
+        $("#cuslink").click(function () {
+            $("#customise").css({ "display": "block" });
+            $("#home").css({ "display": "none" });
+        });
+
+        $("#cuslink2").click(function () {
+            $("#customise").css({ "display": "block" });
+            $("#products").css({ "display": "none" });
+        });
+
+
+        $("#prodlink").click(function () {
+            $("#products").css({ "display": "block" });
+            $("#home").css({ "display": "none" });
+        });
+    </script>
+
+</body>
+
+</html>
