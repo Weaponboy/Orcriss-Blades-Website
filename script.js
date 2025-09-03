@@ -63,6 +63,8 @@ $("#prodtab").click(function () {
 
 $("#toggle-button").click(function () {
     $("#con").toggleClass("active");
+    // $("#toggle-button").toggleClass("Toggle");
+    $("#navbarImage").toggleClass("displayImage");
 });
 
 $("#cuslink").click(function () {

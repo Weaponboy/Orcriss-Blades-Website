@@ -23,7 +23,7 @@
 <body>
 
     <div id="navbar">
-        <img id="im" src="images/Orcris__2_-removebg-preview.png" alt="Orcriss logo">
+        <img id="navbarImage" class = "displayImage" src="images/Orcris__2_-removebg-preview.png" alt="Orcriss logo">
 
         <div id="hello">
             <h1 id="orc">Orcriss Knives</h1>
@@ -65,19 +65,25 @@
         <img id="dams" src="images/WhatsApp Image 2022-07-23 at 4.35.55 PM.jpeg" alt="Dams knife">
 
         <div class="row" id="homerow">
-            <div id="text" class="col-12 col-sm-12 col-md-6 col-xl-6">
-                <p id="small">We are a small blade creation company that specialises in the production of hand-crafted
-                    custom
-                    knives. We are passionate about excellent quality knives for either your kitchen or everyday outdoor
-                    use.
-                </p>
-                <p id="stan">We have a standard EDC (Everyday Carry) knife, and a standard kitchen pairing
-                    knife. You can view both on our <a id="prodlink">Products</a> page.
-                </p>
+            <!-- id="text" -->
+            <div class="col-12 col-sm-12 col-md-6 col-xl-6">
+                <div id="text">
+                    <p id="small">We are a small blade creation company that specialises in the production of hand-crafted
+                        custom
+                        knives. We are passionate about excellent quality knives for either your kitchen or everyday outdoor
+                        use.
+                    </p>
+                    <p id="stan">We have a standard EDC (Everyday Carry) knife, and a standard kitchen pairing
+                        knife. You can view both on our <a id="prodlink">Products</a> page.
+                    </p>
+                </div>
+                
             </div>
-
-            <div id="pic" class="col-12 col-sm-12 col-md-6 col-xl-6">
-                <img id="stand" src="images/WhatsApp Image 2022-08-07 at 1.36.35 PM.jpeg" alt="standed knife">
+<!-- id="pic" -->
+            <div class="col-12 col-sm-12 col-md-6 col-xl-6">
+                <div id="imageHome">
+                    <img id="stand" src="images/homeKnife.jpeg" alt="standed knife">
+                </div>
             </div>
         </div>
 
@@ -219,7 +225,7 @@
                 </div>
             </div>
 
-            <div class="row padding">
+            <div class="row padding imageRow">
                 <h5 id="galleryHeading">Gallery</h5>
 
                 <img class="col-md-3" src="images/IMG_20221015_190245_1.jpg" alt="">
@@ -231,7 +237,7 @@
                 <img class="col-md-3" src="images/IMG_20230408_110352_1.jpg" alt="">
             </div>
 
-            <div class="row padding">
+            <div class="row padding imageRow">
                 <img class="col-md-3" src="images/IMG_20230726_172240.jpg" alt="">
 
                 <img class="col-md-3" src="images/IMG_20230705_162614.jpg" alt="">
@@ -241,7 +247,7 @@
                 <img class="col-md-3" src="images/IMG-20210816-WA0005.jpg" alt="">
             </div>
 
-            <div class="row padding">
+            <div class="row padding imageRow">
                 <img class="col-md-3" src="images/IMG_20230629_151140.jpg" alt="">
 
                 <img class="col-md-3" src="images/IMG-20220626-WA0003.jpg" alt="">
@@ -394,6 +400,7 @@
                 </p>
 
                 <h4 id="prod1">Price</h4>
+
                 <p id="prod1text">
                     R700
                 </p>
