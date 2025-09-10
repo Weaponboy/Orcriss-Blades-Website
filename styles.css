@@ -6,21 +6,21 @@
  }
 
 
-/**
+ /**
 * Navbar styles
 */
  #navbar {
-    display: flex;
-    position: fixed;
-    user-select: none;
-    background: none;
-    /* display: block; */
-    color: white;
-    align-items: center;
-    z-index: 100;
-    width: 100%;
-    height: 10vh;
-    background-color: rgb(63, 13, 22);
+     display: flex;
+     position: fixed;
+     user-select: none;
+     background: none;
+     /* display: block; */
+     color: white;
+     align-items: center;
+     z-index: 100;
+     width: 100%;
+     height: 10vh;
+     background-color: rgb(63, 13, 22);
  }
 
  #navbarImage {
@@ -32,18 +32,18 @@
  }
 
  #orc {
-    font-size: 3vw;
+     font-size: 3vw;
  }
 
  #hello {
-    margin: 0;
-    padding-left: 1vw;
-    height: 3vw;
-    width: 30vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: white;
+     margin: 0;
+     padding-left: 1vw;
+     height: 3vw;
+     width: 30vw;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     color: white;
  }
 
  .topbar {
@@ -72,13 +72,13 @@
 } */
 
 
-  @media(max-width: 1050px) {
+ @media(max-width: 1050px) {
 
      .row {
          width: 100%;
      }
 
-     
+
      #you {
          padding-top: 5%;
      }
@@ -91,12 +91,12 @@
          display: flex;
      }
 
-      #navbarImage {
-        display: block;
-        height: 7vh;
-        margin: 0;
-        padding: 1vh;
-        padding-left: 2vh;
+     #navbarImage {
+         display: block;
+         height: 7vh;
+         margin: 0;
+         padding: 1vh;
+         padding-left: 2vh;
      }
 
      #hello {
@@ -111,7 +111,7 @@
      .topbar {
          display: block;
          width: 100%;
-        font-size: 5vw;
+         font-size: 5vw;
          padding: .8rem;
      }
 
@@ -154,9 +154,9 @@
  }
 
 
- #imageHome{
-    /* width: 76%; */
-    height: 100%;
+ #imageHome {
+     /* width: 76%; */
+     height: 100%;
      margin-left: auto;
      margin-right: auto;
      /* height: 70%; */
@@ -256,34 +256,34 @@
      display: block;
  }
 
- #bladeCol1{
-    padding: 0 !important;
-    height: 100vh;
+ #bladeCol1 {
+     padding: 0 !important;
+     height: 100vh;
  }
 
-  #bladeCol2{
-    padding: 0 !important;
-    height: 100vh;
+ #bladeCol2 {
+     padding: 0 !important;
+     height: 100vh;
  }
 
  @media(max-width: 1050px) {
 
      #homerow {
-        padding-top: 1rem !important;
-        width: auto !important;
-        --bs-gutter-x: 0rem !important;
+         padding-top: 1rem !important;
+         width: auto !important;
+         --bs-gutter-x: 0rem !important;
      }
 
-      #bladeCol1{
-    padding: 0 !important;
-    height: 25vh;
- }
+     #bladeCol1 {
+         padding: 0 !important;
+         height: 25vh;
+     }
 
- #bladeCol2{
-    padding: 0 !important;
-    margin-top: 1vh;
-    height: 50vh;
- }
+     #bladeCol2 {
+         padding: 0 !important;
+         margin-top: 1vh;
+         height: 50vh;
+     }
 
      .row {
          width: 100%;
@@ -306,8 +306,8 @@
      }
 
      #hello {
-        padding: 1% 1%;
-        display: none;
+         padding: 1% 1%;
+         display: none;
      }
 
      #navbar {
@@ -434,94 +434,94 @@
  }
 
  @media (max-width: 1050px) {
-    #TangPinBlock{
-        height: 60vh !important;
-    }
+     #TangPinBlock {
+         height: 60vh !important;
+     }
  }
 
- .firstRow{
-    height: 50vh !important;
+ .firstRow {
+     height: 50vh !important;
  }
 
- .secondRow{
-    height: 45vh !important;
+ .secondRow {
+     height: 45vh !important;
  }
 
- .thirdRow{
-    height: 40vh !important;
+ .thirdRow {
+     height: 40vh !important;
  }
 
- #HandleBlock{
-    display: flex;
-    /* justify-items: ; */
+ #HandleBlock {
+     display: flex;
+     /* justify-items: ; */
  }
 
- .imageBlock{
-    height: 70%;
-    max-width: 100%;
+ .imageBlock {
+     height: 70%;
+     max-width: 100%;
  }
 
- #handleShapeBlock{
-    height: 100% !important;
-    max-width: 100%;
+ #handleShapeBlock {
+     height: 100% !important;
+     max-width: 100%;
  }
 
-@media (max-width: 1050px) {
-    #tangImageBlock{
-        height: 60% !important;
-    }
+ @media (max-width: 1050px) {
+     #tangImageBlock {
+         height: 60% !important;
+     }
 
-    #hiddenTang{
-        height: 40% !important;
-        /* max-width: 0%; */
-    }
+     #hiddenTang {
+         height: 40% !important;
+         /* max-width: 0%; */
+     }
 
-    #HandleBlock{
-        display: flex;
-        flex-direction: column;
-    /* justify-items: ; */
-    }
+     #HandleBlock {
+         display: flex;
+         flex-direction: column;
+         /* justify-items: ; */
+     }
 
      #fullTang {
-        height: 70% !important;
-        max-width: 100%;
-        padding-top: 1rem;
+         height: 70% !important;
+         max-width: 100%;
+         padding-top: 1rem;
      }
 
-      #textBlock{
-        width: 100% !important;
-        margin-left: 0rem !important;
-        padding-right: 0rem !important;
+     #textBlock {
+         width: 100% !important;
+         margin-left: 0rem !important;
+         padding-right: 0rem !important;
      }
 
-    .headtext {
-        font-weight: 600;
-        font-size: 160% !important;
-    }
+     .headtext {
+         font-weight: 600;
+         font-size: 160% !important;
+     }
 
-    #handleShapeBlock{
-        height: 55% !important;
-        max-width: 100%;
-    }
+     #handleShapeBlock {
+         height: 55% !important;
+         max-width: 100%;
+     }
 
-    .handleInlay{
-        height: 45% !important  ;
-    }
+     .handleInlay {
+         height: 45% !important;
+     }
 
-     .bladeFinishes{
-        text-align: center;
-        height: 35% !important;
-        max-width: 100%;
-        padding-top: 0.5rem !important;
-    }
+     .bladeFinishes {
+         text-align: center;
+         height: 35% !important;
+         max-width: 100%;
+         padding-top: 0.5rem !important;
+     }
 
-     #sheathImage{
-        text-align: center;
-        height: 60% !important;
-        max-width: 100%;
-    }
+     #sheathImage {
+         text-align: center;
+         height: 60% !important;
+         max-width: 100%;
+     }
 
-}
+ }
 
  #bladerow {
      /* width: 100; */
@@ -532,40 +532,40 @@
  }
 
  #bladeshapes {
-    text-align: center;
-    height: 100%;
-    max-width: 100%;
+     text-align: center;
+     height: 100%;
+     max-width: 100%;
  }
 
- #handleShape{
-    text-align: center;
-    height: 100%;
-    max-width: 100%;
+ #handleShape {
+     text-align: center;
+     height: 100%;
+     max-width: 100%;
  }
 
- #NameImage{
-    text-align: center;
-    height: 100%;
-    max-width: 100%;
+ #NameImage {
+     text-align: center;
+     height: 100%;
+     max-width: 100%;
  }
 
- #sheathImage{
-    text-align: center;
-    height: 90%;
-    max-width: 100%;
+ #sheathImage {
+     text-align: center;
+     height: 90%;
+     max-width: 100%;
  }
 
- .bladeFinishes{
-    text-align: center;
-    height: 55%;
-    max-width: 100%;
-    padding-top: 1rem;
+ .bladeFinishes {
+     text-align: center;
+     height: 55%;
+     max-width: 100%;
+     padding-top: 1rem;
  }
 
- #textBlock{
-    width: 38%;
-    margin-left: 2rem;
-    padding-right: 2rem;
+ #textBlock {
+     width: 38%;
+     margin-left: 2rem;
+     padding-right: 2rem;
  }
 
  #bladehead {
@@ -588,14 +588,14 @@
 
  #fullTang {
      height: 85%;
-    max-width: 100%;
+     max-width: 100%;
 
      /* padding-top: 2rem; */
  }
 
- #hiddenTang{
+ #hiddenTang {
      height: 50%;
-    max-width: 100%;
+     max-width: 100%;
  }
 
  #pinh {
@@ -628,13 +628,13 @@
      color: #000;
  }
 
- .customImages{
-    height: 50%;
+ .customImages {
+     height: 50%;
  }
 
-.handleInlay{
-    height: 100%;
-}
+ .handleInlay {
+     height: 100%;
+ }
 
  #finishrow {
      width: 100;
@@ -659,8 +659,8 @@
  }
 
  #homerow {
-    padding-top: 3rem;
-    width: 100%;
+     padding-top: 3rem;
+     width: 100%;
  }
 
  .tangcustext {
@@ -924,6 +924,8 @@
      border-style: solid;
  }
 
+
+
  .idprod2_4 {
      width: 100%;
      padding-top: 2rem;
@@ -1040,14 +1042,14 @@
      padding-bottom: 2rem;
  }
 
- .imageRow{
-    width: 100%;
+ .imageRow {
+     width: 100%;
  }
 
- .imagepadding{
-    padding: 0.5rem;
+ .imagepadding {
+     padding: 0.5rem;
  }
 
- .noWidth{
-    width: auto;
+ .noWidth {
+     width: auto;
  }
