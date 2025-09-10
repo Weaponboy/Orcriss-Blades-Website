@@ -419,18 +419,112 @@
  }
 
  .bladecus {
-     border-color: rgb(82, 74, 76);
+     /* border-color: rgb(82, 74, 76); */
      border-width: 10%;
      border-style: solid;
      text-align: center;
      padding: 2rem 1rem;
-     margin: 0;
-     border-radius: 4%;
+     margin: auto;
+     margin-top: 2%;
+     margin-bottom: 2%;
+     width: 95%;
+     height: 60vh;
+     border-radius: 20px;
      background-color: rgb(94, 28, 40);
  }
 
+ @media (max-width: 1050px) {
+    #TangPinBlock{
+        height: 60vh !important;
+    }
+ }
+
+ .firstRow{
+    height: 50vh !important;
+ }
+
+ .secondRow{
+    height: 45vh !important;
+ }
+
+ .thirdRow{
+    height: 40vh !important;
+ }
+
+ #HandleBlock{
+    display: flex;
+    /* justify-items: ; */
+ }
+
+ .imageBlock{
+    height: 70%;
+    max-width: 100%;
+ }
+
+ #handleShapeBlock{
+    height: 100% !important;
+    max-width: 100%;
+ }
+
+@media (max-width: 1050px) {
+    #tangImageBlock{
+        height: 60% !important;
+    }
+
+    #hiddenTang{
+        height: 40% !important;
+        /* max-width: 0%; */
+    }
+
+    #HandleBlock{
+        display: flex;
+        flex-direction: column;
+    /* justify-items: ; */
+    }
+
+     #fullTang {
+        height: 70% !important;
+        max-width: 100%;
+        padding-top: 1rem;
+     }
+
+      #textBlock{
+        width: 100% !important;
+        margin-left: 0rem !important;
+        padding-right: 0rem !important;
+     }
+
+    .headtext {
+        font-weight: 600;
+        font-size: 160% !important;
+    }
+
+    #handleShapeBlock{
+        height: 55% !important;
+        max-width: 100%;
+    }
+
+    .handleInlay{
+        height: 45% !important  ;
+    }
+
+     .bladeFinishes{
+        text-align: center;
+        height: 35% !important;
+        max-width: 100%;
+        padding-top: 0.5rem !important;
+    }
+
+     #sheathImage{
+        text-align: center;
+        height: 60% !important;
+        max-width: 100%;
+    }
+
+}
+
  #bladerow {
-     width: 100;
+     /* width: 100; */
      margin-right: 0;
      margin-left: 0;
      color: #000;
@@ -438,7 +532,40 @@
  }
 
  #bladeshapes {
-     width: 60%;
+    text-align: center;
+    height: 100%;
+    max-width: 100%;
+ }
+
+ #handleShape{
+    text-align: center;
+    height: 100%;
+    max-width: 100%;
+ }
+
+ #NameImage{
+    text-align: center;
+    height: 100%;
+    max-width: 100%;
+ }
+
+ #sheathImage{
+    text-align: center;
+    height: 90%;
+    max-width: 100%;
+ }
+
+ .bladeFinishes{
+    text-align: center;
+    height: 55%;
+    max-width: 100%;
+    padding-top: 1rem;
+ }
+
+ #textBlock{
+    width: 38%;
+    margin-left: 2rem;
+    padding-right: 2rem;
  }
 
  #bladehead {
@@ -459,9 +586,16 @@
      font-weight: 600;
  }
 
- .tangimg {
-     width: 40%;
-     padding-top: 2rem;
+ #fullTang {
+     height: 85%;
+    max-width: 100%;
+
+     /* padding-top: 2rem; */
+ }
+
+ #hiddenTang{
+     height: 50%;
+    max-width: 100%;
  }
 
  #pinh {
@@ -483,10 +617,6 @@
      width: 28%;
  }
 
- #right {
-     padding-right: .06rem;
- }
-
  .inlayimgbig {
      width: 40%;
  }
@@ -498,6 +628,14 @@
      color: #000;
  }
 
+ .customImages{
+    height: 50%;
+ }
+
+.handleInlay{
+    height: 100%;
+}
+
  #finishrow {
      width: 100;
      margin-right: 0;
@@ -506,7 +644,7 @@
  }
 
  .finishimg {
-     width: 40%;
+     height: 40%;
  }
 
  .finishimgbig {
@@ -604,12 +742,12 @@
      background-position-x: center;
      background-position-y: center;
      background-size: cover;
-     border-color: rgb(82, 74, 76);
+     border-color: rgb(94, 28, 40);
      border-width: 10px;
      border-style: solid;
      text-align: center;
      margin: 0;
-     border-radius: 8%;
+     border-radius: 20px;
      background-color: rgb(94, 28, 40);
      padding-left: 5rem;
      padding-right: 5rem;
@@ -791,6 +929,7 @@
      padding-top: 2rem;
      padding-bottom: 2rem;
      margin-top: 2rem;
+     padding-left: 2rem;
      border-style: solid;
  }
 
@@ -813,7 +952,7 @@
  }
 
  .sheathimg {
-     width: 70%;
+     height: 40%;
  }
 
  .none {
@@ -850,6 +989,7 @@
  @media(max-width: 1050px) {
      .idprod2 {
          display: flex;
+         width: auto !important;
      }
 
      .idprod2_4 {
@@ -900,10 +1040,14 @@
      padding-bottom: 2rem;
  }
 
- .padding {
-     padding-bottom: 2rem;
- }
-
  .imageRow{
     width: 100%;
+ }
+
+ .imagepadding{
+    padding: 0.5rem;
+ }
+
+ .noWidth{
+    width: auto;
  }
